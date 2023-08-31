@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
+import {MatGridListModule} from '@angular/material/grid-list';
+import {HttpClientModule} from '@angular/common/http';
+
+import { PopularMovieService } from './services/list.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -20,9 +25,13 @@ import { HeaderComponent } from './pages/home/components/header/header.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    HttpClientModule,
+
+    MatGridListModule
   ],
-  providers: [],
+  providers: [PopularMovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
