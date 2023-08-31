@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './Pages/home/home.component';
-import { AboutUsComponent } from './Pages/about-us/about-us.component';
-import { CategoriesComponent } from './Pages/home/components/categories/categories.component';
-import { ProductListComponent } from './Pages/home/components/product-list/product-list.component';
-import { HeaderComponent } from './Pages/home/components/header/header.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { CategoriesComponent } from './pages/home/components/categories/categories.component';
+import { ProductListComponent } from './pages/home/components/product-list/product-list.component';
+import { HeaderComponent } from './pages/home/components/header/header.component';
 
 @NgModule({
   declarations: [
