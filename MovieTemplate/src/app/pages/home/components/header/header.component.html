@@ -1,31 +1,48 @@
 <mat-grid-list cols="3">
-  
+
   <mat-grid-tile *ngFor="let item of data" style="color: white;">
-      <div class="example-2 card bg-dark">
-        <div class="wrapper" style="background-image: url({{item.imgsource}});">
-          <div class="header">
-            <div class="date">
-              <span class="day">{{item.date}}</span>
-            </div>
-            <ul class="menu-content">
-              <li>
-                <a href="#" class="fa fa-bookmark-o"></a>
-              </li>
-              <li class="mx-3"><a href="#" class="fa fa-heart-o"><span>IMDB:8.7</span></a></li>
-            </ul>
+    <div class="example-2 card bg-dark">
+      <div class="wrapper" style="background-image: url({{item.imgsource}});">
+        <div class="header">
+          <div class="date">
+            <span class="day">{{item.date}}</span>
           </div>
-          <div class="data">
-            <div class="content">
-              <span class="author">Jane Doe</span>
-              <h1 class="title"><a href="#">{{item.title}}</a></h1>
-              <p class="text">{{item.description}}</p>
-              <a href="#" class="button">Read more</a>
-            </div>
+          <ul class="menu-content">
+            <li>
+              <a href="#" class="fa fa-bookmark-o">
+                <div style="
+                background-color: rgb(18, 18, 18);
+                padding: 5px;
+                border-radius: 10px;
+                
+                ">
+                <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="../../../../../assets/img/vector/IMDB_Logo_2016.svg" alt="" class="mx-1" style="height: 18px;justify-content: center">
+
+                <strong class="mx-1 my-0">{{item.imdb}}</strong>
+              </div>
+              </div>
+              </a>
+            </li>
+            <li class="mx-3">
+              <a href="#" class="fa fa-heart-o">
+
+              
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="data">
+          <div class="content">
+            <span class="author">Jane Doe</span>
+            <h1 class="title"><a href="#">{{item.title}}</a></h1>
+            <p class="text">{{item.description}}</p>
+            <a href="#" class="button">Read more</a>
           </div>
         </div>
       </div>
-        
+    </div>
+
   </mat-grid-tile>
 
-  
 </mat-grid-list>
