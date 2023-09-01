@@ -1,0 +1,14 @@
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    background-color: aquamarine;
+    height: 200px;
+    justify-content: center;
+}
+.footer-brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+}

@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import {MatGridListModule} from '@angular/material/grid-list';
 import {HttpClientModule} from '@angular/common/http';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 import { PopularMovieService } from './services/list.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +31,7 @@ import { HeaderComponent } from './pages/home/components/header/header.component
 
     HttpClientModule,
 
-    MatGridListModule
+    MatGridListModule,MatButtonModule,MatCardModule
   ],
   providers: [PopularMovieService],
   bootstrap: [AppComponent]
