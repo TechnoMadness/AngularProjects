@@ -12,23 +12,21 @@ import { Observable } from 'rxjs';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
   
-  sourcee !: MatTableDataSource<MovieStructure>;
+  data : MovieStructure[]=[];
   constructor(private ErrorListService: PopularMovieService) {}
   
   
   ngOnInit(): void {
     this.getErrorList();
-    console.log(this.sourcee);
+    console.log(this.data);
   }
 
 
   getErrorList(){
     this.ErrorListService.getAllUsers().subscribe({
       next:(res)=>{
-        
-        this.sourcee = new MatTableDataSource(res);
+        this.data = res;
       },
 
       error: (err) => {

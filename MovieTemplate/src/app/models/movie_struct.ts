@@ -3,4 +3,6 @@ export interface MovieStructure{
   title:string;
   imgsource: string;
   description: string;
+  date:string;
+  imdb:number;
 }
