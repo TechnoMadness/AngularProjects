@@ -7,7 +7,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 
-import { PopularMovieService } from './services/list.service';
+import { MoviesListService } from './services/list.movies.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -15,6 +15,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CategoriesComponent } from './pages/home/components/categories/categories.component';
 import { ProductListComponent } from './pages/home/components/product-list/product-list.component';
 import { HeaderComponent } from './pages/home/components/header/header.component';
+import {TruncatePipe} from './pipes/turncate.pipe'
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { HeaderComponent } from './pages/home/components/header/header.component
     AboutUsComponent,
     CategoriesComponent,
     ProductListComponent,
-    HeaderComponent
+    HeaderComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { HeaderComponent } from './pages/home/components/header/header.component
 
     MatGridListModule,MatButtonModule,MatCardModule
   ],
-  providers: [PopularMovieService],
+  providers: [MoviesListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

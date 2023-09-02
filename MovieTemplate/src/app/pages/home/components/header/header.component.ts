@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieStructure } from 'src/app/models/movie_struct';
-import { PopularMovieService } from 'src/app/services/list.service';
+import { MoviesListService } from 'src/app/services/list.movies.service';
 import { MatTableDataSource } from '@angular/material/table';
 import {  } from '@angular/material/grid-list';
 import { Observable } from 'rxjs';
@@ -13,25 +13,26 @@ import { Observable } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   
-  data : MovieStructure[]=[];
-  constructor(private ErrorListService: PopularMovieService) {}
+  dataPopular : MovieStructure[]=[];
+  dataAll : MovieStructure[]=[];
+  constructor(private MoviesService: MoviesListService) {}
   
   
   ngOnInit(): void {
-    this.getErrorList();
-    console.log(this.data);
+    this.getMovies();
   }
 
 
-  getErrorList(){
-    this.ErrorListService.getAllUsers().subscribe({
+  getMovies(){
+    this.MoviesService.getPopularMovies().subscribe({
       next:(res)=>{
-        this.data = res;
+        this.dataPopular = res;
       },
 
       error: (err) => {
         console.log(err)
       }
     })
+    
   }
 }

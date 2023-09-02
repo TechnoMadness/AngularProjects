@@ -1,6 +1,6 @@
 <mat-grid-list cols="3">
 
-  <mat-grid-tile *ngFor="let item of data" style="color: white;">
+  <mat-grid-tile *ngFor="let item of dataPopular" style="color: white;">
     <div class="example-2 card bg-dark">
       <div class="wrapper" style="background-image: url({{item.imgsource}});">
         <div class="header">
@@ -13,21 +13,21 @@
                 <div style="
                 background-color: rgb(18, 18, 18);
                 padding: 5px;
-                border-radius: 10px;
-                
-                ">
-                <div style="display: flex; justify-content: center; align-items: center;">
-                <img src="../../../../../assets/img/vector/IMDB_Logo_2016.svg" alt="" class="mx-1" style="height: 18px;justify-content: center">
+                border-radius: 10px;">
 
-                <strong class="mx-1 my-0">{{item.imdb}}</strong>
-              </div>
-              </div>
+                  <div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="../../../../../assets/img/vector/IMDB_Logo_2016.svg" alt="" class="mx-1"
+                      style="height: 18px;justify-content: center">
+                      <strong class="mx-1 my-0">{{item.imdb}}</strong>
+                  </div>
+                  
+                </div>
               </a>
             </li>
             <li class="mx-3">
               <a href="#" class="fa fa-heart-o">
 
-              
+
               </a>
             </li>
           </ul>
