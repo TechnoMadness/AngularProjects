@@ -1,10 +1,10 @@
 Codes to run the project.
 # AngularProjects
 
-#MovieTemplate
+# TestAngular
 1. ng serve -o
 
 
-#MovieTemplate
+# MovieTemplate
 1. ng serve -o
 2. json-server --watch db.json
