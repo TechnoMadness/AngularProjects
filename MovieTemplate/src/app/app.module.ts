@@ -15,7 +15,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CategoriesComponent } from './pages/home/components/categories/categories.component';
 import { ProductListComponent } from './pages/home/components/product-list/product-list.component';
 import { HeaderComponent } from './pages/home/components/header/header.component';
-import {TruncatePipe} from './pipes/turncate.pipe'
+import {TruncatePipe} from './pipes/turncate.pipe';
+import { MoviePageComponent } from './pages/movie-page/movie-page.component'
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {TruncatePipe} from './pipes/turncate.pipe'
     CategoriesComponent,
     ProductListComponent,
     HeaderComponent,
-    TruncatePipe
+    TruncatePipe,
+    MoviePageComponent
   ],
   imports: [
     BrowserModule,
