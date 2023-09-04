@@ -7,7 +7,8 @@
       "date": "2018",
       "imgsource": "https://cdn.marvel.com/content/1x/blackpanther_lob_crd_01_4.jpg",
       "description": "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his ...",
-      "imdb":7.3
+      "imdb":7.3,
+      "category": 2
     },
     {
       "id": 2,
@@ -15,7 +16,8 @@
       "date": "12Aug2016",
       "imgsource": "https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg",
       "description": "The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.",
-      "imdb":8.7
+      "imdb":8.7,
+      "category": 1
     },
     {
       "id": 3,
@@ -23,7 +25,8 @@
       "date": "2008",
       "imgsource": "https://i.pinimg.com/1200x/e0/3f/5a/e03f5a5418e571b6f6f5179409989ba5.jpg",
       "description": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-      "imdb":7.9
+      "imdb":7.9,
+      "category": 2
     }
   ],
 
@@ -35,7 +38,15 @@
       "date": "2022",
       "imgsource": "https://m.media-amazon.com/images/M/MV5BNWM0ZGJlMzMtZmYwMi00NzI3LTgzMzMtNjMzNjliNDRmZmFlXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_.jpg",
       "description": "Doctor Strange teams up with a mysterious teenage girl from his dreams who can travel across multiverses, to battle multiple threats, including other-universe versions of himself, which threaten to wipe out millions across the multiverse. They seek help from Wanda the Scarlet Witch, Wong and others.",
-      "imdb":6.9
+      "imdb":6.9,
+      "category": 2
     }
+  ],
+
+  "category":
+  [
+    {"id":1, "name":"adventure"},
+    {"id":2,"name":"marvel"},
+    {"id":3,"name":"dram"}
   ]
 }

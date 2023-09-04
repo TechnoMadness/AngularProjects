@@ -5,4 +5,5 @@ export interface MovieStructure{
   description: string;
   date:string;
   imdb:number;
+  category:number;
 }

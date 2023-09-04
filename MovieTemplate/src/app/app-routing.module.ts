@@ -10,6 +10,14 @@ const routes: Routes = [
     component:HomeComponent
   },
   {
+    path:'',
+    redirectTo:'home',
+    pathMatch:'full'
+  },
+  {
+    path:'movie-page/:id',component:MoviePageComponent
+  },
+  {
     path:"about-us",
     component:AboutUsComponent
   },
