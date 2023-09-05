@@ -1,7 +1,7 @@
 # Codes to run the project.
 
 #TestAngular
-It is a shopp app test project.
+It is a shopp app test project that includes category page and detailed product page.
 1. ng serve -o
 
 
