@@ -1,8 +1,9 @@
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {MovieStructure} from '../models/movie_struct';
 import { Observable, catchError, tap } from 'rxjs';
+import { CategoryStruct } from '../models/category_struct';
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +13,7 @@ export class MoviesListService {
     
     public popularMovies ='http://localhost:3000/popular-movies';
     public AllMovies ='http://localhost:3000/movielist';
+    public Categories = 'http://localhost:3000/category'
     public constructor(private http: HttpClient) {}
     
     
@@ -28,9 +30,19 @@ export class MoviesListService {
     {
       return this.http.get<MovieStructure>(this.AllMovies+ "/" + movieId);
     }
-    
-    
-    
-    
 
+    getCategories(): Observable<CategoryStruct[]> {
+    return this.http.get<CategoryStruct[]>(this.Categories);
+  }
+    
+  createMovie(movie: MovieStructure): Observable<MovieStructure> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization': 'Token'
+      })
+    }
+    
+    return this.http.post<MovieStructure>(this.AllMovies, movie, httpOptions);
+    }
 }
