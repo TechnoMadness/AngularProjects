@@ -2,7 +2,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {MovieStructure} from '../models/movie_struct';
-import { Observable } from 'rxjs';
+import { Observable, catchError, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -23,6 +23,11 @@ export class MoviesListService {
     public getAllMovies(): Observable<any>{
       return this.http.get<MovieStructure[]>(this.AllMovies);
   }
+
+    public getMovieById(movieId: number): Observable<MovieStructure>
+    {
+      return this.http.get<MovieStructure>(this.AllMovies+ "/" + movieId);
+    }
     
     
     

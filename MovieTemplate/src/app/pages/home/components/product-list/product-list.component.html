@@ -11,4 +11,9 @@
   <div class="title-container mx-2">
     <div class="movie-name"> <strong> {{item.title}} </strong> </div>
   </div>
+
+  <mat-card-actions>
+    <a routerLink="/movie-page/{{item.id}}">sad</a>
+    <button mat-button routerLink="/movie-page/{{item.id}}">Open</button>
+  </mat-card-actions>
 </mat-card>
