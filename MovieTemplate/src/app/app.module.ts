@@ -6,6 +6,13 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {HttpClientModule} from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatStepperModule} from '@angular/material/stepper';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+
 
 import { MoviesListService } from './services/list.movies.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -38,7 +45,7 @@ import { CreateMovieComponent } from './pages/create-movie/create-movie.componen
 
     HttpClientModule,
 
-    MatGridListModule,MatButtonModule,MatCardModule
+    MatGridListModule,MatButtonModule,MatCardModule, FormsModule, ReactiveFormsModule, MatInputModule, MatFormFieldModule, MatStepperModule, BrowserAnimationsModule
   ],
   providers: [MoviesListService],
   bootstrap: [AppComponent]

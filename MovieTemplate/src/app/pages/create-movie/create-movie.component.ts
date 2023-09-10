@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CategoryStruct } from 'src/app/models/category_struct';
 import { MoviesListService } from 'src/app/services/list.movies.service';
@@ -10,11 +11,23 @@ import { MoviesListService } from 'src/app/services/list.movies.service';
 })
 export class CreateMovieComponent {
 
+  constructor(private movieService: MoviesListService,
+    private router: Router,
+    private _formBuilder: FormBuilder) { }
+
+
+
+  firstFormGroup = this._formBuilder.group({
+    firstCtrl: ['', Validators.required],
+  });
+  secondFormGroup = this._formBuilder.group({
+    secondCtrl: ['', Validators.required],
+  });
+  isLinear = false;
 
   categories!: CategoryStruct[];
 
-  constructor(private movieService: MoviesListService,
-              private router: Router) { }
+  
 
   ngOnInit(): void {
     this.movieService.getCategories().subscribe(data => {

@@ -1,19 +1,30 @@
-<mat-card class="example-card m-2 bg-dark" style="color: white;" *ngFor="let item of dataAll">
+<ul
+  class="list-group list-group-horizontal m-5"
+  style="background-color: transparent"
+>
+  <li class="list-group-item m-2" *ngFor="let item of dataAll">
+    <mat-card
+      class="example-card bg-dark"
+      routerLink="/movie-page/{{ item.id }}"
+    >
+      <div class="imdb">
+        
+        <div class="imdb-icon">  
+              <img src="../../../../../assets/img/vector/IMDB_Logo_2016.svg" alt=""/>
+        </div>
+            <div class="imdb-num mx-1">
+              <strong>{{ item.imdb }}</strong>
+            </div>
+      </div>
 
-  <div style=" background-color: black; position: absolute;">
-    <img src="../../../../../assets/img/vector/IMDB_Logo_2016.svg" alt="" class="mx-1" style="height: 18px;justify-content: center">
+      <img
+        class="cover-img"
+        src="{{ item.imgsource }}"
+        alt="Cover of movie {{ item.title }}"
+        style="height: 350px"
+      />
 
-    <strong class="mx-1 my-0">{{item.imdb}}</strong>
-  </div>
-
-  <img src="{{item.imgsource}}" alt="Cover of movie {{item.title}}">
-  
-  <div class="title-container mx-2">
-    <div class="movie-name"> <strong> {{item.title}} </strong> </div>
-  </div>
-
-  <mat-card-actions>
-    <a routerLink="/movie-page/{{item.id}}">sad</a>
-    <button mat-button routerLink="/movie-page/{{item.id}}">Open</button>
-  </mat-card-actions>
-</mat-card>
+      <mat-card-content>{{ item.title }}</mat-card-content>
+    </mat-card>
+  </li>
+</ul>
