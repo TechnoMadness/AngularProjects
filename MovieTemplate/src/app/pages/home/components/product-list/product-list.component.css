@@ -1,5 +1,11 @@
+mat-card{
+  color: white;
+
+}
+
 .example-card {
-    max-width: 250px;
+  cursor: pointer;
+    width: 250px;
   }
   
   .example-header-image {
@@ -22,9 +28,53 @@
   }
 
   .imdb{
-    margin-top: 5px;
     display: flex;
     flex-wrap: nowrap;
-    align-content: end;
+    margin-top: 5px;
+    top: 2px;
+    right: 2px;
+    border-radius: 5px;
+    height: 18px;
+    background-color: black; 
+    position: absolute; 
+    opacity: 1.0;
+    width: 70px;
+  }
+
+  .imdb-icon
+  {
+    display: flex;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .imdb-num{
+    display: flex;
+    margin-top: 0;
+    
+  }
+
+  .list-group-item{
+    background-color: transparent;
+    border: none;
+  }
+
+  .cover-img {
+    opacity: 1.0;
+  }
+  .cover-img:hover {
+    opacity: 0.5;
+  }
+
+  mat-card-content{
+    display: flex;
+    background-color: transparent;
+    align-self: center;
     justify-content: flex-end;
+    align-items: center;
+    justify-self: center;
+    position:absolute;
+    margin-bottom: 2px;
+    bottom: 0;
   }

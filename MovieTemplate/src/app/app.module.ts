@@ -6,6 +6,13 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {HttpClientModule} from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatStepperModule} from '@angular/material/stepper';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+
 
 import { MoviesListService } from './services/list.movies.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +23,8 @@ import { CategoriesComponent } from './pages/home/components/categories/categori
 import { ProductListComponent } from './pages/home/components/product-list/product-list.component';
 import { HeaderComponent } from './pages/home/components/header/header.component';
 import {TruncatePipe} from './pipes/turncate.pipe';
-import { MoviePageComponent } from './pages/movie-page/movie-page.component'
+import { MoviePageComponent } from './pages/movie-page/movie-page.component';
+import { CreateMovieComponent } from './pages/create-movie/create-movie.component'
 
 
 @NgModule({
@@ -28,7 +36,8 @@ import { MoviePageComponent } from './pages/movie-page/movie-page.component'
     ProductListComponent,
     HeaderComponent,
     TruncatePipe,
-    MoviePageComponent
+    MoviePageComponent,
+    CreateMovieComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +45,7 @@ import { MoviePageComponent } from './pages/movie-page/movie-page.component'
 
     HttpClientModule,
 
-    MatGridListModule,MatButtonModule,MatCardModule
+    MatGridListModule,MatButtonModule,MatCardModule, FormsModule, ReactiveFormsModule, MatInputModule, MatFormFieldModule, MatStepperModule, BrowserAnimationsModule
   ],
   providers: [MoviesListService],
   bootstrap: [AppComponent]
