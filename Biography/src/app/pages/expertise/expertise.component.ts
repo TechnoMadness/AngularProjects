@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { WeaponModel } from 'src/app/models/weapon.model';
 import { ExpertiseService } from 'src/app/services/expertise.service';
 
@@ -7,16 +7,16 @@ import { ExpertiseService } from 'src/app/services/expertise.service';
   templateUrl: './expertise.component.html',
   styleUrls: ['./expertise.component.css']
 })
-export class ExpertiseComponent {
+export class ExpertiseComponent implements OnInit{
 
   dataAll : WeaponModel[]=[];
   constructor(private service: ExpertiseService) {}
 
   ngOnInit(): void {
-      this.getMovies();
+      this.getWeapons();
   }
 
-  getMovies(){
+  getWeapons(){
   this.service.getAllWeapons().subscribe({
     next:(res)=>{
       
