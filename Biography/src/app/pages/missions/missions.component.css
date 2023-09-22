@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+
+  body{
+    background-color: transparent;
+
+    width: 70%;
+    margin: auto;
+  }
+
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+
+
+
+
+
+  .mission-card {
+    
+
+    cursor: pointer;
+    pointer-events: all;
+  }
+  .mission-card img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    transition: transform 1s;
+  }
+  
+  .mission-card:hover {
+    filter: grayscale(0);
+  }
+  .mission-card:hover img {
+    filter: grayscale(1) blur(1px);
+  }
+
+
+  
+  
+  .mission-img:hover + .typewriter {
+    display: block;
+  }
+   
+  .typewriter {
+    position: absolute;
+    display: none;
+    top: 50%;
+    vertical-align: center;
+
+
+    border-right: solid 3px rgba(1, 80, 1, 0.75);
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Source Code Pro', monospace;  
+    font-size: 15px;
+    color: rgba(0, 255, 0, 0.7);
+  }
+  
+  /* Animation */
+  .typewriter {
+    animation: animated-text 4s steps(29,end) 1s 1 normal both,
+               animated-cursor 600ms steps(29,end) infinite;
+  }
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 472px;}
+  }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+    from{border-right-color: rgba(0,255,0,.75);}
+    to{border-right-color: transparent;}
+  }
