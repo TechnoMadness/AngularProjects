@@ -15,14 +15,13 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
-    path: 'about-us', component: AboutUsComponent
+    path: 'about-us', component: AboutUsComponent , data: {animation: 'AboutUsPage'}
   },
   {
-    path: 'missions', component: MissionsComponent
+    path: 'missions', component: MissionsComponent , data: {animation: 'MissionsPage'}
   },
   {
-    path: 'expertise',
-    component: ExpertiseComponent
+    path: 'expertise', component: ExpertiseComponent , data : {animation: 'ExpertisePage'}
   }
 ];
 
