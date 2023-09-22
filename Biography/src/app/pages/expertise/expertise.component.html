@@ -1,26 +1,36 @@
 <div class="main">Weapons
 
+    <ul
+  class="list-group list-group-horizontal m-5"
+  style="background-color: transparent"
+>
+  <li class="list-group-item m-2" style="background-color: transparent; border: none;" *ngFor="let item of dataAll">
+    
 
-<div class="container m-2">
-    <div class="card">
-        <div class="imgBx">
-            <img src="../../../assets/Img/m4.png" alt="nike-air-shoe">
-        </div>
-
-        <div class="contentBx">
-
-            <h2>M4 Carbine</h2>
-
-            
-
-            <div class="size">
-                <circle-progress [percent]="85" [radius]="50" [outerStrokeWidth]="5" [innerStrokeWidth]="4"
-                [outerStrokeColor]="'#FFFFFF'" [innerStrokeColor]="'#FFFFFF'" [animation]="true"
-                [animationDuration]="300" [subtitle]="'Accuracy'"  [titleColor]="'#FFFFFF'" [unitsColor]="'#FFFFFF'"></circle-progress>
+    <div class="container m-2" style="background-color: transparent;">
+        <div class="card">
+            <div class="imgBx">
+                <img src="{{item.imgsource}}" alt="nike-air-shoe">
             </div>
+    
+            <div class="contentBx">
+    
+                <h2>{{item.name}}</h2>
+    
+                
+                
+                <div class="size">
+                    <circle-progress [percent]="item.accuracy" [radius]="50" [outerStrokeWidth]="5" [innerStrokeWidth]="4"
+                    [outerStrokeColor]="'#FFFFFF'" [innerStrokeColor]="'#FFFFFF'" [animation]="true"
+                    [animationDuration]="300" [subtitle]="'Accuracy'"  [titleColor]="'#FFFFFF'" [unitsColor]="'#FFFFFF'"></circle-progress>
+                </div>
+            </div>
+    
         </div>
-
     </div>
-</div>
+
+
+  </li>
+</ul>
 
 </div>

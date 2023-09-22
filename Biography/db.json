@@ -1,0 +1,23 @@
+{
+    "weapons": 
+    [
+        {
+        "id": 1, 
+        "name": "M4 Carbine", 
+        "accuracy": 80,
+        "imgsource":"assets/Img/weapons/m4.png"
+        },
+        {
+        "id": 2, 
+        "name": "Pistol", 
+        "accuracy": 55,
+        "imgsource":"assets/Img/weapons/pistol.png"
+        },
+        {
+        "id": 3, 
+        "name": "Sniper Rifle", 
+        "accuracy": 95,
+        "imgsource":"assets/Img/weapons/sniper-rifle.png"
+        }
+    ]
+}
