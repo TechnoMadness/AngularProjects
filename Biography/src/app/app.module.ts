@@ -12,6 +12,8 @@ import { ExpertiseComponent } from './pages/expertise/expertise.component';
 import { ExpertiseService } from './services/expertise.service';
 import { MissionsComponent } from './pages/missions/missions.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,7 @@ import { MissionsComponent } from './pages/missions/missions.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
 
     NgCircleProgressModule.forRoot({})
   ],

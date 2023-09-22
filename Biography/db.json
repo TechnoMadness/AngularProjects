@@ -18,6 +18,12 @@
         "name": "Sniper Rifle", 
         "accuracy": 95,
         "imgsource":"assets/Img/weapons/sniper-rifle.png"
+        },
+        {
+        "id": 4, 
+        "name": "Knife", 
+        "accuracy": 100,
+        "imgsource":"assets/Img/weapons/knife.png"
         }
     ]
 }
