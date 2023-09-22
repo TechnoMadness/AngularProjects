@@ -10,13 +10,15 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ExpertiseComponent } from './pages/expertise/expertise.component';
 import { ExpertiseService } from './services/expertise.service';
+import { MissionsComponent } from './pages/missions/missions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutUsComponent,
-    ExpertiseComponent
+    ExpertiseComponent,
+    MissionsComponent
   ],
   imports: [
     BrowserModule,
