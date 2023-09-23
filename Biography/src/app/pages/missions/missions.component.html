@@ -1,24 +1,32 @@
-<body class="mt-10">
+<body class="mt-10" [@ResizePage]="isOpen ? 'open' : 'closed'">
     <div class="row">
 
+        <div class="column" *ngIf="!isHidden">
+            <div class="mission-card" *ngFor="let item of dataAll" (click)="toggle(item)">
+                <img class="mission-img" src="{{item.imgsource}}" />
+            </div>
+
+        </div>
+
+        <div class="column" *ngIf="!isHidden">
+            <div class="mission-card" *ngFor="let item of dataAll" (click)="toggle(item)">
+                <img class="mission-img" src="{{item.imgsource}}" />
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isHidden">
+        <div class="row">
         <div class="column">
-
-            <div @fade class="mission-card" ng-model="myCheck">
-                <img class="mission-img" src="../../../assets/Img/missions/albania.webp" />
-                <div @fade class="typewriter">Place: Albania <br>Target: Alfranko <br>Details: Unkown Terrorist Activity In the Area</div>
-            </div>
-            <div class="mission-card" ng-hide="myCheck">
-                <img class="mission-img" src="../../../assets/Img/missions/istanbond.webp" />
-                <div class="typewriter">Place: Albania <br>Target: Alfranko <br>Details: Unkown Terrorist Activity In the Area</div>
-            </div>
-            
-        </div>
-
-        <div @fade class="column">
-            <div class="mission-card" ng-hide="myCheck">
-                <img class="mission-img" src="../../../assets/Img/missions/istanbond.webp" />
-                <div class="typewriter">Place: Albania <br>Target: Alfranko <br>Details: Unkown Terrorist Activity In the Area</div>
+            <div class="mission-card-showcase" (click)="goBack(showCase)">
+                <img class="mission-img" src="{{showCase.imgsource}}" />
             </div>
         </div>
+        <div class="column">
+            <div class="typewriter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id possimus culpa officia
+                fuga. Debitis commodi ducimus, officiis, eligendi fugit blanditiis quidem nesciunt perspiciatis eos
+                rerum repellendus possimus exercitationem quibusdam ad?</div>
+        </div>
+    </div>
     </div>
 </body>

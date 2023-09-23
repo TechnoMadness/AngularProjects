@@ -14,6 +14,7 @@ import { ExpertiseComponent } from './pages/expertise/expertise.component';
 import { ExpertiseService } from './services/expertise.service';
 import { MissionsComponent } from './pages/missions/missions.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MissionsService } from './services/missions.service';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       
       MatButtonModule,MatCardModule
   ],
-  providers: [ExpertiseService],
+  providers: [ExpertiseService,MissionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

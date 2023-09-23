@@ -41,14 +41,29 @@
 
 
 
+  .mission-card-showcase{
+    cursor: pointer;
+    pointer-events: all;
+    filter: grayscale(0)
+  }
+  .mission-card-showcase img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    transition: transform 1s;
+  }
+  
+  .mission-card-showcase:hover {
+    filter: grayscale(1) 
+    
+  }
 
 
 
   .mission-card {
-    
-
     cursor: pointer;
     pointer-events: all;
+    filter: grayscale(1)
   }
   .mission-card img {
     margin-top: 8px;
@@ -58,28 +73,20 @@
   }
   
   .mission-card:hover {
-    filter: grayscale(0);
+    filter: grayscale(0) 
+    
   }
-  .mission-card:hover img {
-    filter: grayscale(1) blur(1px);
-  }
-
-   .mission-card:active {
-    display: none;
-   }
 
   
   
-  .mission-img:hover + .typewriter {
-    display: block;
-  }
    
   .typewriter {
-    position: absolute;
-    display: none;
-    top: 50%;
-    vertical-align: center;
-
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25%;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
 
     border-right: solid 3px rgba(1, 80, 1, 0.75);
     white-space: nowrap;
@@ -99,7 +106,7 @@
   
   @keyframes animated-text{
     from{width: 0;}
-    to{width: 472px;}
+    to{width: 100%;}
   }
   
   /* cursor animations */

@@ -25,5 +25,20 @@
         "accuracy": 100,
         "imgsource":"assets/Img/weapons/knife.png"
         }
+    ],
+    "missions": 
+    [
+        {
+        "id": 1,
+        "imgsource":"assets/Img/missions/albania.webp"
+        },
+        {
+        "id": 2,
+        "imgsource":"assets/Img/missions/england.webp"
+        },
+        {
+        "id": 3,
+        "imgsource":"assets/Img/missions/istanbond.webp"
+        }
     ]
 }
