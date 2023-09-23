@@ -1,6 +1,6 @@
 <div *ngIf="movie else no_movie" class="page-body">
     <div class="page-container">
-        <div class="movie-info">
+        <div @fade class="movie-info">
             {{movie.title}}
         </div>
         <div class="movie-video">

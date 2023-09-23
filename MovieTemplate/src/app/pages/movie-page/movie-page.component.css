@@ -6,6 +6,11 @@
     justify-content: center;
 }
 
+
+.movie-info:active {
+    display: none;
+}
+
 .page-container{
     display: grid;
     background-color: brown;
