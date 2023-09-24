@@ -73,23 +73,16 @@
   }
   
   .mission-card:hover {
-    filter: grayscale(0) 
-    
+    filter: grayscale(0);
   }
-
-  
-  
    
   .typewriter {
-    display: flex;
-    flex-wrap: wrap;
+    
     margin-top: 25%;
     margin-left: 10px;
-    justify-content: center;
-    align-items: center;
 
     border-right: solid 3px rgba(1, 80, 1, 0.75);
-    white-space: nowrap;
+    
     overflow: hidden;    
     font-family: 'Source Code Pro', monospace;  
     font-size: 15px;
